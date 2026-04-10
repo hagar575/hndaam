@@ -1,0 +1,5 @@
+.arabic-text {
+  font-family: 'Noto Sans Arabic', 'Arial', sans-serif;
+  direction: rtl;
+  unicode-bidi: embed;
+}
