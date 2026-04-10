@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hnmaad</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="information">
+      <section class="client-information">
+        <h1>Information</h1>
+        <div>
+          <input type="checkbox" id="master">
+          <label for="master">Master</label>
+
+          <input type="checkbox" id="repair">
+          <label for="repair">Repair</label>
+
+          <input type="checkbox" id="full order">
+          <label for="full order">Full Order</label>
+        </div>
+
+        <div>
+          <label for="tailors">Choose a Tailor:</label>
+          <select id="tailors">
+            <option value="tailor1">Tailor 1</option>
+            <option value="tailor2">Tailor 2</option>
+            <option value="tailor3">Tailor 3</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="date-input">Date:</label>
+          <input type="date" id="date-input">
+          <label for="date-input" class="arabic-text">التاريخ:</label>
+        </div>
+
+        <div>
+          <label for="client-name">Client Name:</label>
+          <input type="text" id="client-name">
+          <label for="client-name" class="arabic-text">اسم العميل:</label>
+        </div>
+
+        <div>
+          <label for="client-number">Client Number:</label>
+          <input type="text" id="client-number">
+          <label for="client-number" class="arabic-text">رقم العميل:</label>
+        </div>
+
+        <div>
+          <label for="client-address">Client Address:</label>
+          <input type="text" id="client-address">
+          <label for="client-address" class="arabic-text">عنوان العميل:</label>
+        </div>
+      </section>
+
+      <section class="clothing-information">
+        <div>
+          <p>Dishdasha:</p>
+          <input type="checkbox" id="tailored">
+          <label for="tailored">Tailored</label>
+
+          <input type="checkbox" id="bespoke">
+          <label for="bespoke">Bespoke</label>
+
+          <input type="checkbox" id="signature">
+          <label for="signature">Signature</label>
+
+          <input type="checkbox" id="embroidery">
+          <label for="embroidery">Embroidery</label>
+        </div>
+
+        <div>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" placeholder="Quantity">
+          <label for="quantity" class="arabic-text">الكمية:</label>
+        </div>
+
+        <div>
+          <label for="weight">Weight:</label>
+          <input type="number" id="weight" placeholder="Weight">
+          <label for="weight" class="arabic-text">الوزن:</label>
+        </div>
+
+        <div>
+          <p>Fabric:</p>
+          <input type="radio" id="inhouse" name="fabric">
+          <label for="inhouse">Inhouse</label>
+          
+          <input type="radio" id="outsource" name="fabric">
+          <label for="outsource">Outsource</label>
+        </div>
+
+        <div>
+          <p>Other garments:</p>
+          <input type="checkbox" id="dagla">
+          <label for="dagla">Dagla</label>
+
+          <input type="checkbox" id="vest">
+          <label for="vest">Vest</label>
+
+          <input type="checkbox" id="shirt">
+          <label for="shirt">Shirt</label>
+
+          <input type="checkbox" id="pants">
+          <label for="pants">Pants</label>
+
+          <input type="checkbox" id="socks">
+          <label for="socks">Socks</label>
+
+          <input type="checkbox" id="ghutra">
+          <label for="ghutra">Ghutra</label>
+
+          <input type="checkbox" id="chemagh">
+          <label for="chemagh">Chemagh</label>
+
+        </div>
+      </section>
+    </div>
+
+  </body>
+
+  <script src="script.js"></script>
+</html>
+
