@@ -11,16 +11,19 @@
   <body>
     <div class="information">
       <section class="client-information">
-        <h1>Information</h1>
+        <h1>Information / معلومة</h1>
         <div>
           <input type="checkbox" id="master">
           <label for="master">Master</label>
 
+          <input type="checkbox" id="trial">
+          <label for="trial">Trial</label>
+
           <input type="checkbox" id="repair">
           <label for="repair">Repair</label>
 
-          <input type="checkbox" id="full order">
-          <label for="full order">Full Order</label>
+          <input type="checkbox" id="full-order">
+          <label for="full-order">Full Order</label>
         </div>
 
         <div>
@@ -119,10 +122,79 @@
 
         </div>
       </section>
+
+      <section class="measurements-section">
+        <h1>Measurements / القياسات</h1>
+        <div class="measurement-grid">
+          <div class="measurement-item">
+            <label for="length">
+              <span>Length</span>
+              <span class="arabic-text">الطول</span>
+            </label>
+            <input type="number" id="length" name="length" placeholder="Length">
+          </div>
+
+          <div class="measurement-item">
+            <label for="shoulder">
+              <span>Shoulder</span>
+              <span class="arabic-text">الكتف</span>
+            </label>
+            <input type="number" id="shoulder" name="shoulder" placeholder="Shoulder">
+          </div>
+
+          <div class="measurement-item">
+            <label for="sleeves">
+              <span>Sleeves</span>
+              <span class="arabic-text">الأكمام</span>
+            </label>
+            <input type="number" id="sleeves" name="sleeves" placeholder="Sleeves">
+          </div>
+
+          <div class="measurement-item">
+            <label for="chest">
+              <span>Chest</span>
+              <span class="arabic-text">الصدر</span>
+            </label>
+            <input type="number" id="chest" name="chest" placeholder="Chest">
+          </div>
+
+          <div class="measurement-item">
+            <label for="half-chest">
+              <span>Half Chest</span>
+              <span class="arabic-text">نصف الصدر</span>
+            </label>
+            <input type="number" id="half-chest" name="half-chest" placeholder="Half Chest">
+          </div>
+
+          <div class="measurement-item">
+            <label for="vest-measurement">
+              <span>Vest</span>
+              <span class="arabic-text">الصديري</span>
+            </label>
+            <input type="number" id="vest-measurement" name="vest-measurement" placeholder="Vest">
+          </div>
+
+          <div class="measurement-item">
+            <label for="bottom">
+              <span>Bottom</span>
+              <span class="arabic-text">الأسفل</span>
+            </label>
+            <input type="number" id="bottom" name="bottom" placeholder="Bottom">
+          </div>
+
+          <div class="measurement-item">
+            <label for="hem-fold">
+              <span>Hem Fold</span>
+              <span class="arabic-text">طية الحاشية</span>
+            </label>
+            <input type="number" id="hem-fold" name="hem-fold" placeholder="Hem Fold">
+          </div>
+        </div>
+      </section>
     </div>
 
+    <script src="script.js"></script>
   </body>
 
-  <script src="script.js"></script>
 </html>
 
