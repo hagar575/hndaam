@@ -1,4 +1,4 @@
-// Hide measurements section on page load
+// Show measurements section on page load with all fields visible initially
 
 document.addEventListener("DOMContentLoaded", function() {
   const measurementsSection = document.querySelector(".measurements-section");
@@ -13,17 +13,22 @@ document.addEventListener("DOMContentLoaded", function() {
     pants: ['length', 'waist', 'inseam','bottom']
   };
 
-  // Get all garment checkboxes
+  // Get all garment checkboxes including reset
 
-  const checkboxes = document.querySelectorAll('#dishdasha, #dagla, #vest, #shirt, #pants');
+  const checkboxes = document.querySelectorAll('#dishdasha, #dagla, #vest, #shirt, #pants, #reset-measurements');
 
   // Function to update measurements visibility
 
   function updateMeasurements() {
-    const selectedGarments = Array.from(checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.id);
+    const resetChecked = document.getElementById('reset-measurements').checked;
+    const selectedGarments = Array.from(checkboxes).filter(checkbox => checkbox.checked && checkbox.id !== 'reset-measurements').map(checkbox => checkbox.id);
 
-    if (selectedGarments.length === 0) {
-      measurementsSection.style.display = 'none';
+    if (resetChecked || selectedGarments.length === 0) {
+      measurementsSection.style.display = 'block';
+      // Show all fields
+      document.querySelectorAll('.measurement-grid > div').forEach(div => {
+        div.style.display = 'block';
+      });
       return;
     }
 
@@ -48,12 +53,13 @@ document.addEventListener("DOMContentLoaded", function() {
       const fieldDiv = document.querySelector(`.field-${field}`);
       if (fieldDiv) {
         fieldDiv.style.display = 'block';
-    }
+      }
     });
   }
 
   // Add event listeners to checkboxes
-
   checkboxes.forEach(checkbox => checkbox.addEventListener('change', updateMeasurements));
 
+  // Initialize
+  updateMeasurements();
 });
