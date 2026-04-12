@@ -62,7 +62,8 @@
 
       <section class="clothing-information">
         <div>
-          <p>Dishdasha:</p>
+          <input type="checkbox" id="dishdasha">
+          <label for="dishdasha">Dishdasha</label>
           <input type="checkbox" id="tailored">
           <label for="tailored">Tailored</label>
 
@@ -120,13 +121,16 @@
           <input type="checkbox" id="chemagh">
           <label for="chemagh">Chemagh</label>
 
+          <input type="checkbox" id="reset-measurements">
+          <label for="reset-measurements">Reset Measurements</label>
+
         </div>
       </section>
 
       <section class="measurements-section">
         <h1>Measurements / القياسات</h1>
         <div class="measurement-grid">
-          <div class="measurement-item">
+          <div class="field-length">
             <label for="length">
               <span>Length</span>
               <span class="arabic-text">الطول</span>
@@ -134,7 +138,7 @@
             <input type="number" id="length" name="length" placeholder="Length">
           </div>
 
-          <div class="measurement-item">
+          <div class="field-shoulder">
             <label for="shoulder">
               <span>Shoulder</span>
               <span class="arabic-text">الكتف</span>
@@ -142,7 +146,7 @@
             <input type="number" id="shoulder" name="shoulder" placeholder="Shoulder">
           </div>
 
-          <div class="measurement-item">
+          <div class="field-sleeves">
             <label for="sleeves">
               <span>Sleeves</span>
               <span class="arabic-text">الأكمام</span>
@@ -150,7 +154,7 @@
             <input type="number" id="sleeves" name="sleeves" placeholder="Sleeves">
           </div>
 
-          <div class="measurement-item">
+          <div class="field-chest">
             <label for="chest">
               <span>Chest</span>
               <span class="arabic-text">الصدر</span>
@@ -158,7 +162,7 @@
             <input type="number" id="chest" name="chest" placeholder="Chest">
           </div>
 
-          <div class="measurement-item">
+          <div class="field-half-chest">
             <label for="half-chest">
               <span>Half Chest</span>
               <span class="arabic-text">نصف الصدر</span>
@@ -166,7 +170,7 @@
             <input type="number" id="half-chest" name="half-chest" placeholder="Half Chest">
           </div>
 
-          <div class="measurement-item">
+          <div class="field-vest">
             <label for="vest-measurement">
               <span>Vest</span>
               <span class="arabic-text">الصديري</span>
@@ -174,7 +178,7 @@
             <input type="number" id="vest-measurement" name="vest-measurement" placeholder="Vest">
           </div>
 
-          <div class="measurement-item">
+          <div class="field-bottom">
             <label for="bottom">
               <span>Bottom</span>
               <span class="arabic-text">الأسفل</span>
@@ -182,7 +186,7 @@
             <input type="number" id="bottom" name="bottom" placeholder="Bottom">
           </div>
 
-          <div class="measurement-item">
+          <div class="field-hem-fold">
             <label for="hem-fold">
               <span>Hem Fold</span>
               <span class="arabic-text">طية الحاشية</span>
