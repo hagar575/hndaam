@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
   // Define fields for each type of garment
 
   const garmentFields = {
-    dishdasha: ['length', 'shoulder', 'sleeves', 'chest', 'half-chest', 'vest-measurement', 'bottom', 'hem-fold', 'collar'],
+    dishdasha: ['length', 'shoulder', 'sleeves', 'chest', 'half-chest', 'vest-measurement', 'bottom', 'hem-fold'],
     dagla: ['length', 'shoulder', 'sleeves', 'chest', 'bottom'],
     vest: ['length', 'shoulder', 'chest', 'half-chest', 'bottom'],
-    shirt: ['length', 'shoulder', 'sleeves', 'chest', 'collar'],
-    pants: ['length', 'waist', 'inseam','bottom']
+    shirt: ['length', 'shoulder', 'sleeves', 'chest'],
+    pants: ['length', 'waist', 'bottom']
   };
 
   // Get all garment checkboxes including reset
