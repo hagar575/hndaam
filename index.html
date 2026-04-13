@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hnmaad</title>
+    <title>Hndaam</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
   </head>
@@ -11,10 +11,13 @@
   <body>
     <div class="information">
       <section class="client-information">
-        <h1>Information / معلومة</h1>
+        <h1>Information / البينات</h1>
         <div>
           <input type="checkbox" id="master">
           <label for="master">Master</label>
+
+          <input type="checkbox" id="tailor">
+          <label for="tailor">Tailor</label>
 
           <input type="checkbox" id="trial">
           <label for="trial">Trial</label>
@@ -27,43 +30,32 @@
         </div>
 
         <div>
-          <label for="tailors">Choose a Tailor:</label>
-          <select id="tailors">
-            <option value="tailor1">Tailor 1</option>
-            <option value="tailor2">Tailor 2</option>
-            <option value="tailor3">Tailor 3</option>
-          </select>
-        </div>
-
-        <div>
           <label for="date-input">Date:</label>
           <input type="date" id="date-input">
-          <label for="date-input" class="arabic-text">التاريخ:</label>
+          <label for="date-input" class="arabic-text">: التاريخ</label>
         </div>
 
         <div>
           <label for="client-name">Client Name:</label>
           <input type="text" id="client-name">
-          <label for="client-name" class="arabic-text">اسم العميل:</label>
+          <label for="client-name" class="arabic-text">: اسم العميل</label>
         </div>
 
         <div>
           <label for="client-number">Client Number:</label>
           <input type="text" id="client-number">
-          <label for="client-number" class="arabic-text">رقم العميل:</label>
+          <label for="client-number" class="arabic-text">: رقم العميل</label>
         </div>
 
         <div>
           <label for="client-address">Client Address:</label>
           <input type="text" id="client-address">
-          <label for="client-address" class="arabic-text">عنوان العميل:</label>
+          <label for="client-address" class="arabic-text">: عنوان العميل</label>
         </div>
       </section>
 
       <section class="clothing-information">
         <div>
-          <input type="checkbox" id="dishdasha">
-          <label for="dishdasha">Dishdasha</label>
           <input type="checkbox" id="tailored">
           <label for="tailored">Tailored</label>
 
@@ -80,13 +72,13 @@
         <div>
           <label for="quantity">Quantity:</label>
           <input type="number" id="quantity" placeholder="Quantity">
-          <label for="quantity" class="arabic-text">الكمية:</label>
+          <label for="quantity" class="arabic-text">: الكمية</label>
         </div>
 
         <div>
           <label for="weight">Weight:</label>
-          <input type="number" id="weight" placeholder="Weight">
-          <label for="weight" class="arabic-text">الوزن:</label>
+          <input type="number" step="0.01" id="weight" placeholder="Weight">
+          <label for="weight" class="arabic-text">: الوزن</label>
         </div>
 
         <div>
@@ -99,7 +91,10 @@
         </div>
 
         <div>
-          <p>Other garments:</p>
+          <p>Garments:</p>
+          <input type="checkbox" id="dishdasha">
+          <label for="dishdasha">Dishdasha</label>
+
           <input type="checkbox" id="dagla">
           <label for="dagla">Dagla</label>
 
@@ -135,7 +130,7 @@
               <span>Length</span>
               <span class="arabic-text">الطول</span>
             </label>
-            <input type="number" id="length" name="length" placeholder="Length">
+            <input type="number" step="0.1" id="length" name="length" placeholder="Length">
           </div>
 
           <div class="field-shoulder">
@@ -143,7 +138,7 @@
               <span>Shoulder</span>
               <span class="arabic-text">الكتف</span>
             </label>
-            <input type="number" id="shoulder" name="shoulder" placeholder="Shoulder">
+            <input type="number" step="0.1" id="shoulder" name="shoulder" placeholder="Shoulder">
           </div>
 
           <div class="field-sleeves">
@@ -151,7 +146,7 @@
               <span>Sleeves</span>
               <span class="arabic-text">الأكمام</span>
             </label>
-            <input type="number" id="sleeves" name="sleeves" placeholder="Sleeves">
+            <input type="number" step="0.1" id="sleeves" name="sleeves" placeholder="Sleeves">
           </div>
 
           <div class="field-chest">
@@ -159,7 +154,7 @@
               <span>Chest</span>
               <span class="arabic-text">الصدر</span>
             </label>
-            <input type="number" id="chest" name="chest" placeholder="Chest">
+            <input type="number" step="0.1" id="chest" name="chest" placeholder="Chest">
           </div>
 
           <div class="field-half-chest">
@@ -167,7 +162,7 @@
               <span>Half Chest</span>
               <span class="arabic-text">نصف الصدر</span>
             </label>
-            <input type="number" id="half-chest" name="half-chest" placeholder="Half Chest">
+            <input type="number" step="0.1" id="half-chest" name="half-chest" placeholder="Half Chest">
           </div>
 
           <div class="field-vest">
@@ -175,7 +170,7 @@
               <span>Vest</span>
               <span class="arabic-text">الصديري</span>
             </label>
-            <input type="number" id="vest-measurement" name="vest-measurement" placeholder="Vest">
+            <input type="number" step="0.1" id="vest-measurement" name="vest-measurement" placeholder="Vest">
           </div>
 
           <div class="field-bottom">
@@ -183,7 +178,7 @@
               <span>Bottom</span>
               <span class="arabic-text">الأسفل</span>
             </label>
-            <input type="number" id="bottom" name="bottom" placeholder="Bottom">
+            <input type="number" step="0.1" id="bottom" name="bottom" placeholder="Bottom">
           </div>
 
           <div class="field-hem-fold">
@@ -191,7 +186,7 @@
               <span>Hem Fold</span>
               <span class="arabic-text">طية الحاشية</span>
             </label>
-            <input type="number" id="hem-fold" name="hem-fold" placeholder="Hem Fold">
+            <input type="number" step="0.1" id="hem-fold" name="hem-fold" placeholder="Hem Fold">
           </div>
         </div>
       </section>
@@ -205,11 +200,10 @@
             <span class="arabic-text">طوق</span>
           </div>
           <div class="option-row">
-            <label><input type="radio" name="neck-style" value="round"> Round</label>
-            <label><input type="radio" name="neck-style" value="kuwaiti"> Kuwaiti</label>
-            <label><input type="radio" name="neck-style" value="saudi"> Saudi</label>
-            <label><input type="radio" name="neck-style" value="open"> Open</label>
-            <label><input type="radio" name="neck-style" value="mandarin"> Mandarin</label>
+            <label><input type="radio" name="neck-style" value="stand-up-collar"> Stand-up Collar</label>
+            <label><input type="radio" name="neck-style" value="collarless"> Collarless</label>
+            <label><input type="radio" name="neck-style" value="shirt-collar"> Shirt Collar</label>
+            <label><input type="radio" name="neck-style" value="rounded-stand-up-collar"> Rounded Stand-up Collar</label>
           </div>
         </div>
 
@@ -234,7 +228,6 @@
             <label><input type="radio" name="chest-strip" value="none"> None</label>
             <label><input type="radio" name="chest-strip" value="single"> Single</label>
             <label><input type="radio" name="chest-strip" value="double"> Double</label>
-            <label><input type="radio" name="chest-strip" value="with-lock"> With Lock</label>
           </div>
         </div>
 
@@ -244,9 +237,8 @@
             <span class="arabic-text">جيب أمام</span>
           </div>
           <div class="option-row">
-            <label><input type="radio" name="front-pocket" value="none"> None</label>
-            <label><input type="radio" name="front-pocket" value="pen"> Pen</label>
-            <label><input type="radio" name="front-pocket" value="patch"> Patch</label>
+            <label><input type="radio" name="front-pocket" value="angled-bottom"> Angled Bottom</label>
+            <label><input type="radio" name="front-pocket" value="rounded-bottom"> Rounded Bottom</label>
           </div>
         </div>
 
@@ -256,9 +248,10 @@
             <span class="arabic-text">أسبلة</span>
           </div>
           <div class="option-row">
-            <label><input type="radio" name="cuff-style" value="none"> None</label>
-            <label><input type="radio" name="cuff-style" value="single"> Single</label>
-            <label><input type="radio" name="cuff-style" value="double"> Double</label>
+            <label><input type="radio" name="cuff-style" value="square-cuff"> Square Cuff</label>
+            <label><input type="radio" name="cuff-style" value="rounded-cuff"> Rounded Cuff</label>
+            <label><input type="radio" name="cuff-style" value="angled-cuff"> Angled Cuff</label>
+            <label><input type="radio" name="cuff-style" value="french-cuff"> French Cuff</label>
           </div>
         </div>
 
@@ -274,13 +267,13 @@
           </div>
         </div>
 
-        <div class="style-option">
+        <!-- <div class="style-option">
           <label class="style-option-header"><span>Top Button</span> <span class="arabic-text">زرار علوي</span>
             <input type="checkbox" name="top-button" value="yes">
           </label>
-        </div>
+        </div> -->
 
-        <div class="style-option">
+        <!-- <div class="style-option">
           <div class="style-option-header">
             <span>Wallet</span>
             <span class="arabic-text">محفظة</span>
@@ -290,7 +283,7 @@
             <label><input type="radio" name="wallet" value="left"> Left</label>
             <label><input type="radio" name="wallet" value="right"> Right</label>
           </div>
-        </div>
+        </div> -->
 
         <div class="style-option">
           <label class="style-option-header"><span>Zip</span> <span class="arabic-text">زيبون</span>
@@ -343,9 +336,9 @@
           <label><input type="checkbox" name="laundry" value="yes"> <span>Laundry</span> <span class="arabic-text">غسيل</span></label>
         </div>
 
-        <div class="extras-row two-columns">
+        <!-- <div class="extras-row two-columns">
           <label><input type="checkbox" name="pant" value="yes"> <span>Pant</span> <span class="arabic-text">بنطلون</span></label>
-        </div>
+        </div> -->
 
         <div class="extras-row two-columns">
           <label for="first-piece"><span>First Piece</span> <span class="arabic-text">القطعة الأولى</span></label>
