@@ -16,6 +16,36 @@ body {
   padding: 2rem;
 }
 
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.language-switcher button {
+  appearance: none;
+  border: 1px solid #8B1a1a;
+  background: transparent;
+  color: #8B1a1a;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.language-switcher button:hover {
+  background: rgba(139, 26, 26, 0.08);
+}
+
+.language-switcher button.active {
+  background: #8B1a1a;
+  color: #ffffff;
+  border-color: #8B1a1a;
+}
+
 .information {
   width: 100%;
   max-width: 1200px;
