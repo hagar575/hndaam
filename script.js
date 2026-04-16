@@ -236,6 +236,11 @@ function setLanguage(selectedLanguage) {
   const language = translations[selectedLanguage] ? selectedLanguage : 'english';
   localStorage.setItem('language', language);
 
+  document.querySelectorAll('.language-switcher button').forEach(button => {
+    const onclick = button.getAttribute('onclick') || '';
+    button.classList.toggle('active', onclick.includes(`setLanguage('${language}')`));
+  });
+
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.dataset.i18n;
     const translation = translations[language][key] || translations.english[key] || element.textContent;
