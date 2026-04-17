@@ -1,4 +1,10 @@
-﻿const translations = {
+﻿const { createClient } = supabase
+
+const supabaseUrl = 'https://gyzyilpzjalkustowzgp.supabase.co'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5enlpbHB6amFsa3VzdG93emdwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0MTM1MjYsImV4cCI6MjA5MTk4OTUyNn0.LJfgSKEsx1mYfuVEhinZHJYxCLlemCHrChMgwVdbZWQ'
+const client = createClient(supabaseUrl, supabaseKey)
+
+const translations = {
   english: {
     information: 'Information',
     master: 'Master',
@@ -74,7 +80,8 @@
     laundry: 'Laundry',
     firstPiece: 'First Piece',
     dueDate: 'Due Date',
-    remarks: 'Remarks'
+    remarks: 'Remarks',
+    submitOrder: 'Submit Order'
   },
   arabic: {
     information: 'معلومات',
@@ -151,7 +158,8 @@
     laundry: 'غسيل',
     firstPiece: 'القطعة الأولى',
     dueDate: 'تاريخ الاستحقاق',
-    remarks: 'ملاحظات'
+    remarks: 'ملاحظات',
+    submitOrder: 'إرسال الطلب'
   },
   urdu: {
     information: 'معلومات',
@@ -228,7 +236,8 @@
     laundry: 'لانڈری',
     firstPiece: 'پہلا ٹکڑا',
     dueDate: 'آخری تاریخ',
-    remarks: 'تبصرے'
+    remarks: 'تبصرے',
+    submitOrder: 'آرڈر جمع کروائیں'
   }
 };
 
@@ -333,4 +342,66 @@ document.addEventListener('DOMContentLoaded', function() {
   updateMeasurements();
   const savedLanguage = localStorage.getItem('language') || 'english';
   setLanguage(savedLanguage);
+
+  // Add event listener for submit button
+  document.getElementById('submit-btn').addEventListener('click', submitOrder);
 });
+
+function submitOrder() {
+  // Collect form values
+  const client_name = document.getElementById('client-name').value;
+  const client_number = document.getElementById('client-number').value;
+  const client_address = document.getElementById('client-address').value;
+  const date = document.getElementById('date-input').value;
+  const due_date = document.getElementById('due-date').value;
+  // const tailor = document.getElementById('tailors').value;
+
+  // Collect boolean values from checkboxes
+  const master = document.getElementById('master').checked;
+  const trial = document.getElementById('trial').checked;
+  const repair = document.getElementById('repair').checked;
+  const full_order = document.getElementById('full-order').checked;
+  const dishdasha = document.getElementById('dishdasha').checked;
+  const dagla = document.getElementById('dagla').checked;
+  const vest = document.getElementById('vest').checked;
+  const shirt = document.getElementById('shirt').checked;
+  const pants = document.getElementById('pants').checked;
+  const socks = document.getElementById('socks').checked;
+  const ghutra = document.getElementById('ghutra').checked;
+  const chemagh = document.getElementById('chemagh').checked;
+
+  // Collect text value from fabric radio buttons
+  const fabric = document.querySelector('input[name="fabric"]:checked') ? document.querySelector('input[name="fabric"]:checked').value : '';
+
+  // Prepare data object
+  const orderData = {
+    client_name,
+    client_number,
+    client_address,
+    date,
+    due_date,
+    // tailor,
+    master,
+    trial,
+    repair,
+    full_order,
+    dishdasha,
+    dagla,
+    vest,
+    shirt,
+    pants,
+    socks,
+    ghutra,
+    chemagh,
+    fabric
+  };
+
+  // Insert into Supabase table 'orders'
+  client.from('orders').insert([orderData])
+    .then(() => {
+      alert('Order saved successfully');
+    })
+    .catch(() => {
+      alert('Error saving order');
+    });
+}
