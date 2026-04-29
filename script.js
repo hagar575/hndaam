@@ -1,7 +1,7 @@
 ﻿const { createClient } = supabase
 
-const supabaseUrl = 'https://gyzyilpzjalkustowzgp.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5enlpbHB6amFsa3VzdG93emdwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0MTM1MjYsImV4cCI6MjA5MTk4OTUyNn0.LJfgSKEsx1mYfuVEhinZHJYxCLlemCHrChMgwVdbZWQ'
+const supabaseUrl = ''
+const supabaseKey = ''
 const client = createClient(supabaseUrl, supabaseKey)
 
 const translations = {
